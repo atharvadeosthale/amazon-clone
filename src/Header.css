@@ -15,7 +15,7 @@
 }
 .header__search {
   display: flex;
-  flex: 1;
+  flex: 0.99;
 }
 .header__searchInput {
   height: 12px;
@@ -50,4 +50,6 @@
   display: flex;
   align-items: center;
   color: white;
+  margin-left: 10px;
+  margin-right: 10px;
 }

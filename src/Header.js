@@ -29,7 +29,12 @@ function Header() {
         </div>
         <div className="header__optionBasket">
           <ShoppingBasketIcon />
-          <span className="header__basketCount header__optionLineTwo">0</span>
+          <span
+            className="header__basketCount header__optionLineTwo"
+            style={{ marginLeft: "5px" }}
+          >
+            0
+          </span>
         </div>
       </div>
     </div>
