@@ -11,6 +11,14 @@ function Login() {
   const signIn = (e) => {
     e.preventDefault();
     // firebase
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        if (auth) {
+          history.push("/");
+        }
+      })
+      .catch((err) => alert(err.message));
   };
 
   const register = (e) => {
@@ -18,12 +26,11 @@ function Login() {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
-        console.log("auth came back ", auth);
         if (auth) {
           history.push("/");
         }
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => alert(err.message));
     // fancy firebase register
   };
 
