@@ -1,9 +1,15 @@
 .product {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  /*background-color: white;*/
+  background: linear-gradient(
+    to bottom right,
+    rgb(235, 195, 217),
+    rgb(188, 217, 235)
+  );
   z-index: 1;
   align-items: center;
+  overflow: hidden;
   justify-content: flex-end;
   margin: 10px;
   padding: 20px;
@@ -33,3 +39,11 @@
 .product__rating {
   display: flex;
 }
+/*
+.product__bestseller {
+  align-self: flex-start;
+  overflow: hidden;
+  background-color: yellow;
+  transform: rotate(-45deg);
+}
+*/

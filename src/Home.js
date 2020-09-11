@@ -1,8 +1,13 @@
-import React from "react";
+import { Drawer } from "@material-ui/core";
+import React, { useState } from "react";
+import Checkout from "./Checkout";
 import "./Home.css";
+import { sizing } from "@material-ui/core";
 import Product from "./Product";
 
 const Home = () => {
+  const [drawer, setDrawer] = useState(false);
+
   return (
     <div className="home">
       <div className="home__container">
@@ -10,7 +15,7 @@ const Home = () => {
           src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonVideo/2020/X-site/Multititle/Aug/1500x600_Hero-Tall_np._CB404803728_.jpg"
           className="home__image"
         />
-        <div className="home__row">
+        <div className="home__row" style={{ marginTop: "300px" }}>
           <Product
             id="12849"
             title="The Most helpful book in the world, this book gives you basic knowledge about life (ofcourse if you do not know)."
@@ -26,6 +31,7 @@ const Home = () => {
             rating={5}
           />
         </div>
+
         <div className="home__row">
           <Product
             id="24242"

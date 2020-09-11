@@ -5,9 +5,11 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
+import { Drawer } from "@material-ui/core";
+import Checkout from "./Checkout";
 
 function Header() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user, drawer }, dispatch] = useStateValue();
 
   const handleAuthentication = () => {
     if (user) {
@@ -46,7 +48,14 @@ function Header() {
           <span className="header__optionLineOne">Your</span>
           <span className="header__optionLineTwo">Prime</span>
         </div>
-        <Link to="/checkout">
+        <Link
+          onClick={() => {
+            dispatch({
+              type: "SET_DRAWER",
+              toggle: true,
+            });
+          }}
+        >
           <div className="header__optionBasket">
             <ShoppingBasketIcon />
             <span
@@ -57,6 +66,9 @@ function Header() {
             </span>
           </div>
         </Link>
+        <Drawer open={drawer} style={{ width: "50%" }}>
+          <Checkout />
+        </Drawer>
       </div>
     </div>
   );

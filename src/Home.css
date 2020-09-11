@@ -2,6 +2,7 @@
   width: 100%;
   z-index: -1;
   margin-bottom: -250px;
+  position: fixed;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 * ::-webkit-scrollbar {
@@ -9,6 +10,7 @@
 }
 .home {
   display: flex;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
@@ -17,6 +19,7 @@
 .home__row {
   display: flex;
   z-index: -1;
+
   margin-left: 5px;
   margin-right: 5px;
 }

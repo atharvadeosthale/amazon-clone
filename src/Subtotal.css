@@ -5,7 +5,12 @@
   width: 300px;
   height: 100px;
   padding: 20px;
-  background-color: #f3f3f3;
+  /*background-color: #f3f3f3;*/
+  background: linear-gradient(
+    to bottom right,
+    rgb(235, 195, 217),
+    rgb(188, 217, 235)
+  );
   border: 1px solid #dddddd;
   border-radius: 3px;
 }

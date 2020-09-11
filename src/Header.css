@@ -2,7 +2,8 @@
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #131921;
+  /*background-color: #131921;*/
+  background: linear-gradient(to right, rgb(50, 168, 82), rgb(50, 87, 168));
   position: sticky;
   top: 0;
   z-index: 100;
